@@ -13,8 +13,8 @@ def start(message):
 
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
-    bot.send_message(message.chat.id, f' Курс {message.text} = \
-{model.get_valute(message.text)} руб.')
+    bot.send_message(message.chat.id, f' Курс {model.get_name(message.text)} =\
+ {model.get_value(message.text)} руб.')
 
 print('server run')
 bot.infinity_polling()
